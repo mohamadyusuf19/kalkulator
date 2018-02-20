@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Kalkulator</title>
+    </head>
+    <body>
+        <script>
+        function tambah() {
+            var myForm = document.kalkulator;
+            var a=eval(myForm.bilangan1.value);
+            var b=eval(myForm.bilangan2.value);
+            var z = a + b;
+            document.getElementById('hasil').innerHTML = z;
+        }
+        function kurang() {
+            var myForm = document.kalkulator;
+            var a=eval(myForm.bilangan1.value);
+            var b=eval(myForm.bilangan2.value);
+            var z = a - b;
+            document.getElementById('hasil').innerHTML = z;
+        }
+        function kali() {
+            var myForm = document.kalkulator;
+            var a=eval(myForm.bilangan1.value);
+            var b=eval(myForm.bilangan2.value);
+            var z = a * b;
+            document.getElementById('hasil').innerHTML = z;
+        }
+        function bagi() {
+            var myForm = document.kalkulator;
+            var a=eval(myForm.bilangan1.value);
+            var b=eval(myForm.bilangan2.value);
+            var z = a / b;
+            document.getElementById('hasil').innerHTML = z;
+        }
+        </script>
+        <form name="kalkulator">
+            <p>bilangan 1  <input type="text" name="bilangan1" /></p>
+            <p>bilangan 2  <input type="text" name="bilangan2" /></p>
+                <input type="button" value="+" onClick="tambah()" />
+                <input type="button" value="-" onClick="kurang()" />
+                <input type="button" value="x" onClick="kali()" />
+                <input type="button" value=":" onClick="bagi()" />
+            <p>
+            Hasil  :  <a id="hasil"></a>
+        </form>
+    </body>
+</html>
